@@ -7,19 +7,19 @@
 
 import SwiftUI
 
-//struct StateView: View {
-//    let stateName: String
-//
-//
-//
-//
-//
-//
-////    var body: some View {
-////        Text("Selected state: \(stateName)")
-////            .font(.largeTitle)
-////    }
-//}
+struct StateView: View {
+    let stateName: String
+
+
+
+
+
+
+    var body: some View {
+        Text("Selected state: \(stateName)")
+            .font(.largeTitle)
+    }
+}
 
 struct ContentView: View {
     @State private var searchText = ""
@@ -82,8 +82,12 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(self.searchResults, id: \.self) { item in
-//                    NavigationLink(destination: StateView(stateName: item)) {
-                        Text(item)
+                    NavigationLink {
+                        StateView(stateName: item)
+                    } label: {
+                        Text("\(item)")
+                    }
+
                     }
                 }
                 .searchable(text: $searchText, prompt: "Look for something")
