@@ -14,6 +14,8 @@
 		76B3F39A2821690700819E95 /* USA_ProjectTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B3F3992821690700819E95 /* USA_ProjectTests.swift */; };
 		76B3F3A42821690700819E95 /* USA_ProjectUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B3F3A32821690700819E95 /* USA_ProjectUITests.swift */; };
 		76B3F3A62821690700819E95 /* USA_ProjectUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76B3F3A52821690700819E95 /* USA_ProjectUITestsLaunchTests.swift */; };
+		76CF5365283DA17200BA6105 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CF5364283DA17200BA6105 /* Model.swift */; };
+		76CF5367283DA19200BA6105 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76CF5366283DA19200BA6105 /* NetworkManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		76B3F39F2821690700819E95 /* USA_ProjectUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = USA_ProjectUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		76B3F3A32821690700819E95 /* USA_ProjectUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USA_ProjectUITests.swift; sourceTree = "<group>"; };
 		76B3F3A52821690700819E95 /* USA_ProjectUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = USA_ProjectUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		76CF5364283DA17200BA6105 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		76CF5366283DA19200BA6105 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +102,8 @@
 				76B3F38A2821690600819E95 /* ContentView.swift */,
 				76B3F38C2821690600819E95 /* Assets.xcassets */,
 				76B3F38E2821690600819E95 /* Preview Content */,
+				76CF5364283DA17200BA6105 /* Model.swift */,
+				76CF5366283DA19200BA6105 /* NetworkManager.swift */,
 			);
 			path = USA_Project;
 			sourceTree = "<group>";
@@ -257,6 +263,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				76CF5367283DA19200BA6105 /* NetworkManager.swift in Sources */,
+				76CF5365283DA17200BA6105 /* Model.swift in Sources */,
 				76B3F38B2821690600819E95 /* ContentView.swift in Sources */,
 				76B3F3892821690600819E95 /* USA_ProjectApp.swift in Sources */,
 			);

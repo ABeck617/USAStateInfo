@@ -23,6 +23,7 @@ struct StateView: View {
 
 struct ContentView: View {
     @State private var searchText = ""
+    @StateObject var networkManager = NetworkManager()
     
 
     var states = [ "Alabama",
@@ -92,6 +93,9 @@ struct ContentView: View {
                 }
                 .searchable(text: $searchText, prompt: "Look for something")
                 .navigationTitle("USA States")
+                .onAppear {
+                    networkManager.fetch()
+                }
                
                 
             }
