@@ -8,7 +8,7 @@
 import Foundation
 
 
-struct CovidInfo: Decodable {
+struct CovidInfo: Decodable, Hashable {
     var created_at: String
     var state: String
     var tot_cases: String

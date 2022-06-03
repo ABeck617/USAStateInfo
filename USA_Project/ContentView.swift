@@ -26,72 +26,22 @@ struct ContentView: View {
     @StateObject var networkManager = NetworkManager()
     
 
-    var states = [ "Alabama",
-                   "Alaska",
-                   "Arizona",
-                   "Arkansas",
-                   "California",
-                   "Colorado",
-                   "Connecticut",
-                   "Delaware",
-                   "Florida",
-                   "Georgia",
-                   "Hawaii",
-                   "Idaho",
-                   "Illinois",
-                   "Indiana",
-                   "Iowa",
-                   "Kansas",
-                   "Kentucky",
-                   "Louisiana",
-                   "Maine",
-                   "Maryland",
-                   "Massachusetts",
-                   "Michigan",
-                   "Minnesota",
-                   "Mississippi",
-                   "Missouri",
-                   "Montana",
-                   "Nebraska",
-                   "Nevada",
-                   "New Hampshire",
-                   "New Jersey",
-                   "New Mexico",
-                   "New York",
-                   "North Carolina",
-                   "North Dakota",
-                   "Ohio",
-                   "Oklahoma",
-                   "Oregon",
-                   "Pennsylvania",
-                   "Rhode Island",
-                   "South Carolina",
-                   "South Dakota",
-                   "Tennessee",
-                   "Texas",
-                   "Utah",
-                   "Vermont",
-                   "Virginia",
-                   "Washington",
-                   "West Virginia",
-                   "Wisconsin",
-                   "Wyoming" ]
   
     
     
     var body: some View {
         NavigationView {
             List {
-                ForEach(self.searchResults, id: \.self) { item in
+                ForEach(networkManager.covidInfo, id: \.self) { state in
                     NavigationLink {
-                        StateView(stateName: item)
+                        StateView(stateName: state.state)
                     } label: {
-                        Text("\(item)")
+                        Text("\(state.state)")
                     }
 
                     }
                 }
-                .searchable(text: $searchText, prompt: "Look for something")
+                //.searchable(text: $searchText, prompt: "Look for something")
                 .navigationTitle("USA States")
                 .onAppear {
                     networkManager.fetch()
@@ -101,13 +51,13 @@ struct ContentView: View {
             }
         }
         
-        var searchResults: [String] {
-            if searchText.isEmpty {
-                return states
-            } else {
-                return states.filter { $0.localizedCaseInsensitiveContains(searchText)}
-            }
-        }
+//        var searchResults: [String] {
+//            if searchText.isEmpty {
+//                return states
+//            } else {
+//                return states.filter { $0.localizedCaseInsensitiveContains(searchText)}
+//            }
+//        }
     
     }
     
